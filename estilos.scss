@@ -24,6 +24,7 @@ $font2: 'Abel', sans-serif;
 }
 
 
+
 .row{
     --bs-gutter-x: 0rem;
 }
@@ -102,13 +103,13 @@ font-family: $font2;
     align-items: center;
 }
 .new{
+    margin: 0;
+    padding-right: 0;
     display: flex;
     flex-direction: row;
     align-items: center;
     align-content: space-around;
     justify-content: center;
-    
-    margin-right: 2%;
     flex-flow:wrap row;
         }
 
@@ -153,13 +154,11 @@ justify-content: right;
 }
 
 
-.form{
-    margin: 5%;
-}
+
 
 form{
-    display: flex;
-justify-content: left;
+display: flex;
+justify-content: center;
 
 }
 
@@ -185,7 +184,7 @@ justify-content: left;
         } 
 
 
-    
+
 
 
 .labiales{
@@ -217,14 +216,14 @@ justify-content: left;
 .carrusel{
 width: 600px ;
 height: 1100px;
-width: 100%;
+width: 100% !important;
+
 }
 
 
 
 .carousel-inner{
-    
-        img{
+img{
         width: 600px;
         height: 1100px;
         } 
@@ -247,13 +246,13 @@ width: 100%;
 
 .btn-light{
     background-color: $color2;
-    color: white;
+    color: $color1;
     padding: 1px solid $color2;
 }
-  
+
 .btn-light:hover{
-    background-color: white;
-    color: pink;
+    background-color: $color1;
+    color: $color2;
     
 }
 
@@ -262,6 +261,8 @@ width: 100%;
     margin: 2%;
     
 }
+
+
 
 
 
@@ -280,40 +281,49 @@ width: 100%;
     }
 
 
-    @media screen and (min-width: 0px) and (max-width: 768px){
-        .tuto{ font-size: 18px;
-            margin: 5px;
-
-        }
+@media screen and (min-width: 0px) and (max-width: 768px){
+    .tuto{ font-size: 18px;
+            margin: 5px;}
         }
 
-        @media screen and (min-width: 769px) and (max-width: 1880px){
-            .tuto{ font-size: 20px;
-    
-            }
+@media screen and (min-width: 769px) and (max-width: 1880px){
+    .tuto{ font-size: 20px;}
             }
         
 
-   @media screen and (min-width: 0px) and (max-width: 768px){
-        .carrusel{ width:100%  !important;
-            margin-left: 0 !important;
-            margin-bottom: 5% !important;
-            height: 200px !important;
-            display: flex;
-            justify-content: left;
-            align-items: flex-start;
-            align-content: flex-start;
-            .carousel-item{
-                img{
-                    height: 100%;
-                    width: 100%;
+@media screen and (min-width: 0px) and (max-width: 768px){
+    .carrusel{ 
+        width:100%  !important;
+        height:auto !important;
+            
+        .carousel-item{
+            img{
+                height: 100%;
+                width: 100%;
                 }
-
-        }
+            }
         }     
 
         
         }
+
+
+@media screen and (min-width: 769px) {
+    .carrusel{ 
+        width:100%  !important;
+        height:auto !important;
+               
+    .carousel-item{
+        img{
+            height: 100% !important;
+            width: 100% !important;
+            }
+    
+            }
+            }     
+    
+            
+            }
 
 
 
@@ -323,30 +333,14 @@ width: 100%;
     display: flex;
 }
 
-$bordes:(
-    borde1: palevioletred,
-    borde2: rgb(245, 166, 199)
-    );
-
-@each $borde, $colores in $bordes {
-    .mapa--#{$borde}{
-        background-color: white;
-        height: 300px;
-        width: 300px;
-        display: flex;
-        margin-left: 10%;
-        border: 5px double $colores;
-        align-content: center;
-        
-    }
-    
+.form{
+    position: center;
 }
 
 .carrusel{
-    width: 1200px;
-    height: 1100px;
-    margin-left: 20%;
-    
+    width: 100%;
+    height: 100%;
+
 }
 
 footer{
@@ -357,6 +351,46 @@ footer{
     .col-md-2{
         margin-left: 2%;
     }
+}
+
+.footer-p {
+    color: $color1;
+    font-family: $font1;
+    font-size: 20px;
+}
+
+.font-weight-bold {
+    font-size: 20px;
+    color: $color1;
+}
+.prod1{
+    font-size: 20px !important;
+    color: $color1 !important;
+    font-family: $font1 !important;
+}
+
+i{
+    img{
+        margin-left: 8px;
+    }
+}
+.prod{
+    font-size: 17px;
+    color: $color1;
+    font-family: $font1;
+}
+
+.tit{
+    color: $color1;
+    margin-top: 15px;
+}
+
+
+.sub{
+    background-color: black;
+}
+.text-md-right{
+    float: right;
 }
 
 .derechos{
@@ -370,7 +404,6 @@ footer{
     padding-bottom: 30%;
     height: 0;
     overflow: hidden;
-   
 }
 
 .videos iframe{
@@ -383,4 +416,11 @@ footer{
     border: 3px solid palevioletred;
 }
 
+
+.container, .container-fluid, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
+    width: 100%;
+    padding: 0;
+    margin-right: 0;
+    margin-left: 0;
+}
 

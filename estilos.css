@@ -89,12 +89,13 @@ h2 {
 }
 
 .new {
+  margin: 0;
+  padding-right: 0;
   display: flex;
   flex-direction: row;
   align-items: center;
   align-content: space-around;
   justify-content: center;
-  margin-right: 2%;
   flex-flow: wrap row;
 }
 
@@ -135,13 +136,9 @@ h2 {
   font-size: 25px;
 }
 
-.form {
-  margin: 5%;
-}
-
 form {
   display: flex;
-  justify-content: left;
+  justify-content: center;
 }
 
 .container-contacto {
@@ -175,7 +172,7 @@ form {
 .carrusel {
   width: 600px;
   height: 1100px;
-  width: 100%;
+  width: 100% !important;
 }
 
 .carousel-inner img {
@@ -239,47 +236,34 @@ form {
 @media screen and (min-width: 0px) and (max-width: 768px) {
   .carrusel {
     width: 100% !important;
-    margin-left: 0 !important;
-    margin-bottom: 5% !important;
-    height: 200px !important;
-    display: flex;
-    justify-content: left;
-    align-items: flex-start;
-    align-content: flex-start;
+    height: auto !important;
   }
   .carrusel .carousel-item img {
     height: 100%;
     width: 100%;
   }
 }
+@media screen and (min-width: 769px) {
+  .carrusel {
+    width: 100% !important;
+    height: auto !important;
+  }
+  .carrusel .carousel-item img {
+    height: 100% !important;
+    width: 100% !important;
+  }
+}
 .fotocontacto img {
   display: flex;
 }
 
-.mapa--borde1 {
-  background-color: white;
-  height: 300px;
-  width: 300px;
-  display: flex;
-  margin-left: 10%;
-  border: 5px double palevioletred;
-  align-content: center;
-}
-
-.mapa--borde2 {
-  background-color: white;
-  height: 300px;
-  width: 300px;
-  display: flex;
-  margin-left: 10%;
-  border: 5px double #f5a6c7;
-  align-content: center;
+.form {
+  position: center;
 }
 
 .carrusel {
-  width: 1200px;
-  height: 1100px;
-  margin-left: 20%;
+  width: 100%;
+  height: 100%;
 }
 
 footer h2 {
@@ -287,6 +271,46 @@ footer h2 {
 }
 footer .col-md-2 {
   margin-left: 2%;
+}
+
+.footer-p {
+  color: white;
+  font-family: "PT Sans Narrow", sans-serif;
+  font-size: 20px;
+}
+
+.font-weight-bold {
+  font-size: 20px;
+  color: white;
+}
+
+.prod1 {
+  font-size: 20px !important;
+  color: white !important;
+  font-family: "PT Sans Narrow", sans-serif !important;
+}
+
+i img {
+  margin-left: 8px;
+}
+
+.prod {
+  font-size: 17px;
+  color: white;
+  font-family: "PT Sans Narrow", sans-serif;
+}
+
+.tit {
+  color: white;
+  margin-top: 15px;
+}
+
+.sub {
+  background-color: black;
+}
+
+.text-md-right {
+  float: right;
 }
 
 .derechos {
@@ -309,6 +333,13 @@ footer .col-md-2 {
   height: 100%;
   margin-left: 2%;
   border: 3px solid palevioletred;
+}
+
+.container, .container-fluid, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
+  width: 100%;
+  padding: 0;
+  margin-right: 0;
+  margin-left: 0;
 }
 
 /*# sourceMappingURL=estilos.css.map */
